@@ -3,7 +3,7 @@ const client = new Discord.Client();
 var prefix = "c";
 var adminprefix = 'Y'
 
-const developers = ["472413769700474901"]
+const developers = ["461468630773661699"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
@@ -24,7 +24,7 @@ client.on('message', message => {
       message.channel.send(`**✅   ${argresult}**`)
   } else 
   if (message.content.startsWith(adminprefix + 'sets')) {
-    client.user.setGame(argresult, "https://www.twitch.tv/dream");
+    client.user.setGame(argresult, "https://www.twitch.tv/abdoufersaoui_dz");
       message.channel.send(`**✅**`)
   }
   if (message.content.startsWith(adminprefix + 'setname')) {
@@ -38,4 +38,4 @@ if (message.content.startsWith(adminprefix + 'setava')) {
 });
 
 
-client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
+client.login(process.env.BOT_TOKEN);
